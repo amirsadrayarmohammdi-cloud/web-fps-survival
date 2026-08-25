@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="fa">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Web FPS Survival - Vertical Slice</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div id="ui-root">
+    <div id="main-menu" class="overlay">
+      <h1>THE DEPTHS</h1>
+      <div class="menu-buttons">
+        <button id="new-game">NEW GAME</button>
+        <button id="continue">CONTINUE</button>
+        <button id="settings-btn">SETTINGS</button>
+        <button id="controls-btn">CONTROLS</button>
+        <button id="credits-btn">CREDITS</button>
+      </div>
+    </div>
+
+    <div id="hud" class="hidden">
+      <div id="battery">Battery: <span id="battery-val">100</span>%</div>
+      <div id="crosshair">+</div>
+      <div id="interactHint" class="hint hidden">PRESS E TO INTERACT</div>
+    </div>
+
+    <div id="settings-panel" class="overlay hidden">
+      <h2>Settings</h2>
+      <label>Quality:
+        <select id="quality-select">
+          <option>LOW</option><option>MEDIUM</option><option selected>HIGH</option><option>ULTRA</option>
+        </select>
+      </label>
+      <label>Resolution scale:
+        <input id="res-scale" type="range" min="0.5" max="1" step="0.1" value="1"/>
+      </label>
+      <label>Mouse sensitivity:
+        <input id="sensitivity" type="range" min="0.2" max="2" step="0.1" value="1"/>
+      </label>
+      <label><input id="fps-counter" type="checkbox"/> Show FPS</label>
+      <button id="settings-back">BACK</button>
+    </div>
+
+    <div id="pause-menu" class="overlay hidden">
+      <h2>Paused</h2>
+      <button id="resume">RESUME</button>
+      <button id="save-game">SAVE</button>
+      <button id="load-game">LOAD</button>
+      <button id="quit">QUIT</button>
+    </div>
+
+    <canvas id="game-canvas"></canvas>
+    <div id="fps" class="hidden"></div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

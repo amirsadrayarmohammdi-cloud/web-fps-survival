@@ -1,0 +1,18 @@
+{
+  "name": "web-fps-survival-vertical-slice",
+  "version": "0.1.0",
+  "description": "Vertical slice of a web-based First Person Survival Horror (Three.js, WebGL2/WebGPU fallback)",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "author": "generated-by-copilot",
+  "license": "MIT",
+  "dependencies": {
+    "three": "^0.156.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
